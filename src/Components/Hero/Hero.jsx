@@ -4,7 +4,10 @@ import profileImage from "../../assets/profileImg.jpg";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center text-center px-6 py-12 bg-transparent">
+    <div
+      id="home"
+      className="flex flex-col items-center justify-center text-center px-6 pb-12 pt-32 bg-transparent"
+    >
       {/* Profile Image */}
       <img
         src={profileImage}
@@ -22,23 +25,33 @@ const Hero = () => {
       </h1>
 
       <p className="text-secondary text-lg max-w-2xl mt-4">
-        I am a frontend developer from California, USA with 10 years of
-        experience in multiple companies like Microsoft, Tesla, and Apple.
+        “I’m passionate about building clean and responsive web applications.
+        Currently learning and growing my skills in React, JavaScript, and
+        modern web technologies. Excited to take on new challenges and
+        contribute to meaningful projects.”
       </p>
 
       {/* Social Icons */}
       <div className="flex gap-6 text-3xl text-primary mt-6">
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/tasnim29"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaGithub className="hover:text-white transition duration-300" />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/tasnim-mahmud-9102b3294/"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaLinkedin className="hover:text-white transition duration-300" />
         </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://x.com/Tashparker"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaTwitter className="hover:text-white transition duration-300" />
         </a>
       </div>

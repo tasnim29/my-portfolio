@@ -3,7 +3,7 @@ import underLine from "../../assets/under.png";
 
 const Skills = () => {
   return (
-    <div className="py-20 max-w-7xl mx-auto">
+    <div id="skills" className="py-20 max-w-7xl mx-auto">
       {/* title */}
       <div className="mb-12 flex justify-center">
         <div className="relative inline-block">

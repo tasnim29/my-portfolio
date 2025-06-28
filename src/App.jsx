@@ -1,11 +1,14 @@
 import React from "react";
 import background from "./assets/background.png";
+import contactBg from "./assets/contactMe.png";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import AboutMe from "./Components/AboutMe/AboutMe";
 import Skills from "./Components/Skills/Skills";
 import Education from "./Components/Education/Education";
 import Projects from "./Components/Projects/Projects";
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   return (
@@ -26,6 +29,15 @@ const App = () => {
         <Skills></Skills>
         <Education></Education>
         <Projects></Projects>
+      </div>
+      <div
+        className="relative bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${contactBg})` }}
+      >
+        <div className="relative z-10">
+          <Contact></Contact>
+          <Footer></Footer>
+        </div>
       </div>
     </div>
   );

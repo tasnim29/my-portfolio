@@ -7,7 +7,7 @@ import Lottie from "lottie-react";
 
 const Education = () => {
   return (
-    <div className="py-20 max-w-7xl mx-auto">
+    <div id="education" className="py-20 max-w-7xl mx-auto">
       {/* Title */}
       <div className="mb-12 flex justify-center">
         <div className="relative inline-block text-center">

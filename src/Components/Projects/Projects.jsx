@@ -6,7 +6,7 @@ import Project3 from "./Project3/Project3";
 
 const Projects = () => {
   return (
-    <div className="py-20 max-w-7xl mx-auto">
+    <div id="projects" className="py-20 max-w-7xl mx-auto">
       {/* Title */}
       <div className="mb-12 flex justify-center">
         <div className="relative inline-block text-center">
