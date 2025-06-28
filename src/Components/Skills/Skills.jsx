@@ -1,18 +1,29 @@
 import React from "react";
+import underLine from "../../assets/under.png";
 
 const Skills = () => {
   return (
     <div className="py-20 max-w-7xl mx-auto">
-      <div className="mb-12">
-        <h2 className="text-5xl font-bold mb-3 text-center">My Specialty</h2>
-        <div className="w-24 h-1 bg-primary rounded-full mb-6 mx-auto "></div>
+      {/* title */}
+      <div className="mb-12 flex justify-center">
+        <div className="relative inline-block">
+          <h2 className="text-6xl font-bold mb-0 relative z-10">
+            My Specialty
+          </h2>
+          <img
+            src={underLine}
+            alt="Underline"
+            className="absolute right-0 -bottom-2 w-32 z-0"
+          />
+        </div>
       </div>
+
       <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 ">
         {/* frontend */}
 
         <div className="bg-secondary text-gray-950 rounded-md cursor-pointer transition duration-500 hover:scale-105  p-6">
           <div className="mb-5">
-            <h1 className="text-2xl mb-2">Front End</h1>
+            <h1 className="text-2xl text-center font-bold mb-2">Front End</h1>
             <div className="w-full h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
@@ -71,7 +82,7 @@ const Skills = () => {
         {/* backend */}
         <div className="bg-secondary text-gray-950 rounded-md cursor-pointer transition duration-500 hover:scale-105 p-6">
           <div className="mb-5">
-            <h1 className="text-2xl text-left mb-2">Back End</h1>
+            <h1 className="text-2xl text-center font-bold  mb-2">Back End</h1>
             <div className="w-full h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 
@@ -114,7 +125,7 @@ const Skills = () => {
         {/* tools */}
         <div className="bg-secondary text-gray-950 rounded-md cursor-pointer transition duration-500 hover:scale-105  p-6">
           <div className="mb-5">
-            <h1 className="text-2xl text-left mb-2">Tools</h1>
+            <h1 className="text-2xl text-center font-bold  mb-2">Tools</h1>
             <div className="w-full h-1 bg-primary mx-auto rounded-full"></div>
           </div>
 

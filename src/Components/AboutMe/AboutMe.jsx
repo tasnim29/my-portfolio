@@ -2,13 +2,14 @@ import React from "react";
 import myImage1 from "../../assets/myImg-1.jpg";
 import myImage2 from "../../assets/myImg-2.jpg";
 import myImage3 from "../../assets/profileImg.jpg";
+import underLine from "../../assets/under.png";
 
 const AboutMe = () => {
   return (
     <section className="py-20" id="about">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left - Image Grid */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="row-span-2">
             <img
               src={myImage1}
@@ -34,8 +35,17 @@ const AboutMe = () => {
 
         {/* Right - About Text */}
         <div>
-          <h2 className="text-5xl font-bold mb-3">About Myself</h2>
-          <div className="w-24 h-1 bg-primary rounded-full mb-6"></div>
+          <div className="mb-12 flex justify-center">
+            <div className="relative inline-block">
+              <h2 className="text-6xl font-bold mb-0 relative z-10">AboutMe</h2>
+              <img
+                src={underLine}
+                alt="Underline"
+                className="absolute right-0 -bottom-2 w-32 z-0"
+              />
+            </div>
+          </div>
+
           <p className="text-lg text-secondary leading-relaxed">
             Hi, I'm{" "}
             <span className="font-semibold text-primary text-xl">
