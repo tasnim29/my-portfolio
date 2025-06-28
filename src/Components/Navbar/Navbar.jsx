@@ -62,9 +62,15 @@ const Navbar = () => {
         <ul className="hidden md:flex gap-6 text-lg items-center">
           {navItems}
         </ul>
-        <button className="hidden md:inline-block btn btn-primary text-white font-semibold ml-4">
-          Contact with me
-        </button>
+        {/* Resume Button */}
+        <a
+          href="/resume.pdf" // Replace with actual link
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-1 rounded-full text-lg font-semibold transition duration-300"
+        >
+          View Resume
+        </a>
 
         {/* Mobile icon */}
         <div className="md:hidden">
