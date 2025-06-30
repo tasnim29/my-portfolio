@@ -45,7 +45,7 @@ const App = () => {
         className="relative bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${contactBg})` }}
       >
-        <div className="relative z-10">
+        <div className="">
           <Contact></Contact>
           <Footer></Footer>
         </div>
