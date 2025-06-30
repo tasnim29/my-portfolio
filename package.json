@@ -13,6 +13,7 @@
     "@babel/runtime": "^7.27.6",
     "@tailwindcss/vite": "^4.1.11",
     "aos": "^2.3.4",
+    "emailjs-com": "^3.2.0",
     "lottie-react": "^2.4.1",
     "react": "^19.1.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",

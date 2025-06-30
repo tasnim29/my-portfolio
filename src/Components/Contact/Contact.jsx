@@ -2,54 +2,52 @@ import React from "react";
 import underLine from "../../assets/under.png";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
 import { toast, ToastContainer } from "react-toastify";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+  const onSubmit = (e) => {
+    e.preventDefault();
 
-    formData.append("access_key", "5df14003-5384-43ad-99b8-26ae2cb2ef08");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: json,
-    }).then((res) => res.json());
-
-    if (res.success) {
-      toast.success("Successfully send the message to the owner");
-      event.target.reset();
-      // console.log("Success", res);
-    }
+    emailjs
+      .sendForm(
+        "service_dfif3si", // replace with your EmailJS service ID
+        "template_ltpy4gb", // replace with your EmailJS template ID
+        e.target,
+        "3n_qKai8LB3ySb_kn" // replace with your EmailJS public key
+      )
+      .then(
+        () => {
+          toast.success("Successfully sent the message to the owner");
+          e.target.reset();
+        },
+        (error) => {
+          console.error(error);
+          toast.error("Failed to send message");
+        }
+      );
   };
+
   return (
     <div data-aos="fade-up" id="contact" className="py-20 max-w-7xl mx-auto">
       {/* Title */}
       <div className="mb-12 flex justify-center">
         <div className="relative inline-block text-center">
-          <h2 className="text-6xl font-bold text-white mb-0 ">Get In Touch</h2>
+          <h2 className="text-6xl font-bold text-white mb-0">Get In Touch</h2>
           <img
             src={underLine}
             alt="Underline"
-            className="absolute right-0 -bottom-2 w-32 "
+            className="absolute right-0 -bottom-2 w-32"
           />
         </div>
       </div>
 
       <div className="flex flex-col md:flex-row justify-between gap-8 items-center">
-        {/* left div */}
+        {/* Left Div */}
         <div className="space-y-5 text-left w-full md:w-1/2">
           <h1 className="text-primary text-5xl font-bold mb-5">Let's talk</h1>
           <p className="text-secondary">
             I'm currently available to take on new projects, so feel free to
-            send me a message about anything you'd like me to work on. You can
-            contact me anytime.
+            send me a message about anything you'd like me to work on.
           </p>
 
           <div className="flex items-center gap-3 text-gray-700">
@@ -68,26 +66,26 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* right div */}
-        <div className="w-full md:w-1/2  p-6 rounded-lg shadow-md">
+        {/* Right Div */}
+        <div className="w-full md:w-1/2 p-6 rounded-lg shadow-md">
           <form onSubmit={onSubmit} className="space-y-4">
             <input
               type="text"
-              name="name"
+              name="from_name"
               placeholder="Your Name"
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
             <input
               type="email"
-              name="email"
+              name="from_email"
               placeholder="Your Email"
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
             <textarea
               placeholder="Write your message..."
-              name="textarea"
+              name="message"
               rows="5"
               className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-primary"
               required
