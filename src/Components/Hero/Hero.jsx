@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import profileImage from "../../assets/profileImg.jpg";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
@@ -18,7 +19,15 @@ const Hero = () => {
       {/* Name and Title */}
       <h1 className="text-5xl font-bold mt-6">
         <span className="bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-500 bg-clip-text text-transparent">
-          I’m Tasnim Mahmud,
+          <Typewriter
+            words={[" I’m Tasnim Mahmud,"]}
+            loop={false}
+            cursor
+            cursorStyle="|"
+            typeSpeed={100}
+            deleteSpeed={100}
+            delaySpeed
+          ></Typewriter>
         </span>
         <br />
         <span className="text-white">Web developer based in Bangladesh.</span>
@@ -58,7 +67,7 @@ const Hero = () => {
 
       {/* Resume Button */}
       <a
-        href="/resume.pdf" // Replace with actual link
+        href="https://drive.google.com/file/d/1W-yCh8t-oDw9AJRYtcRGfyg4s-4ksPTq/view?usp=sharing" // Replace with actual link
         target="_blank"
         rel="noopener noreferrer"
         className="mt-8 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-full text-lg font-semibold transition duration-300"

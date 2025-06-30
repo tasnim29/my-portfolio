@@ -40,7 +40,7 @@ const Project1 = () => {
           <span className="badge badge-primary">Mongo DB</span>
         </div>
         {/* buttons */}
-        <div className="mt-5 space-x-2 flex-wrap">
+        <div className="mt-5 flex flex-wrap gap-2">
           <a
             href="https://green-circle-client.web.app/"
             target="_blank"

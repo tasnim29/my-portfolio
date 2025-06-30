@@ -3,13 +3,11 @@ import underLine from "../../assets/under.png";
 
 const Skills = () => {
   return (
-    <div id="skills" className="py-20 max-w-7xl mx-auto">
+    <div data-aos="fade-up" id="skills" className="py-20 max-w-7xl mx-auto">
       {/* title */}
       <div className="mb-12 flex justify-center">
         <div className="relative inline-block">
-          <h2 className="text-6xl font-bold mb-0 relative z-10">
-            My Specialty
-          </h2>
+          <h2 className="text-6xl font-bold mb-0 relative">My Specialty</h2>
           <img
             src={underLine}
             alt="Underline"

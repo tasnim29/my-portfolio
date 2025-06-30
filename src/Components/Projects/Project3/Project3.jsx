@@ -41,7 +41,7 @@ const Project3 = () => {
           <span className="badge badge-primary">Mongo DB</span>
         </div>
         {/* buttons */}
-        <div className="mt-5 space-x-2">
+        <div className="mt-5 flex flex-wrap gap-2">
           <a
             href="https://assignment-9-bc372.web.app/"
             target="_blank"

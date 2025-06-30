@@ -7,7 +7,10 @@ import underLine from "../../assets/under.png";
 const AboutMe = () => {
   return (
     <section className="py-20" id="about">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div
+        data-aos="fade-up"
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+      >
         {/* Left - Image Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="row-span-2">
@@ -37,7 +40,7 @@ const AboutMe = () => {
         <div>
           <div className="mb-12 flex justify-center">
             <div className="relative inline-block">
-              <h2 className="text-6xl font-bold mb-0 relative z-10">AboutMe</h2>
+              <h2 className="text-6xl font-bold mb-0 relative ">AboutMe</h2>
               <img
                 src={underLine}
                 alt="Underline"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import background from "./assets/background.png";
 import contactBg from "./assets/contactMe.png";
 import Navbar from "./Components/Navbar/Navbar";
@@ -10,7 +10,18 @@ import Projects from "./Components/Projects/Projects";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 
+// aos
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 300,
+    });
+  }, []);
   return (
     <div className=" text-white outfit">
       <div

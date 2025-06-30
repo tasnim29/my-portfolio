@@ -6,11 +6,11 @@ import Project3 from "./Project3/Project3";
 
 const Projects = () => {
   return (
-    <div id="projects" className="py-20 max-w-7xl mx-auto">
+    <div data-aos="fade-up" id="projects" className="py-20 max-w-7xl mx-auto">
       {/* Title */}
       <div className="mb-12 flex justify-center">
         <div className="relative inline-block text-center">
-          <h2 className="text-6xl font-bold text-white mb-0 z-10 relative">
+          <h2 className="text-6xl font-bold text-white mb-0 relative">
             My latest works
           </h2>
           <img

@@ -29,17 +29,15 @@ const Contact = () => {
     }
   };
   return (
-    <div id="contact" className="py-20 max-w-7xl mx-auto">
+    <div data-aos="fade-up" id="contact" className="py-20 max-w-7xl mx-auto">
       {/* Title */}
       <div className="mb-12 flex justify-center">
         <div className="relative inline-block text-center">
-          <h2 className="text-6xl font-bold text-white mb-0 z-10 relative">
-            Get In Touch
-          </h2>
+          <h2 className="text-6xl font-bold text-white mb-0 ">Get In Touch</h2>
           <img
             src={underLine}
             alt="Underline"
-            className="absolute right-0 -bottom-2 w-32 z-0"
+            className="absolute right-0 -bottom-2 w-32 "
           />
         </div>
       </div>
