@@ -19,7 +19,7 @@ const Skills = () => {
       <div className=" grid grid-cols-1 md:grid-cols-3 gap-5 ">
         {/* frontend */}
 
-        <div className="bg-secondary text-gray-950 rounded-md cursor-pointer transition duration-500 hover:scale-105  p-6">
+        <div className="bg-black/30 backdrop-blur-sm text-neutral-content rounded-md cursor-pointer transition duration-500 hover:scale-105  p-6">
           <div className="mb-5">
             <h1 className="text-2xl text-center font-bold mb-2">Front End</h1>
             <div className="w-full h-1 bg-primary mx-auto rounded-full"></div>
@@ -78,7 +78,7 @@ const Skills = () => {
           </div>
         </div>
         {/* backend */}
-        <div className="bg-secondary text-gray-950 rounded-md cursor-pointer transition duration-500 hover:scale-105 p-6">
+        <div className="bg-black/30 backdrop-blur-sm text-neutral-content rounded-md cursor-pointer transition duration-500 hover:scale-105 p-6">
           <div className="mb-5">
             <h1 className="text-2xl text-center font-bold  mb-2">Back End</h1>
             <div className="w-full h-1 bg-primary mx-auto rounded-full"></div>
@@ -121,7 +121,7 @@ const Skills = () => {
           </div>
         </div>
         {/* tools */}
-        <div className="bg-secondary text-gray-950 rounded-md cursor-pointer transition duration-500 hover:scale-105  p-6">
+        <div className="bg-black/30 backdrop-blur-sm text-neutral-content rounded-md cursor-pointer transition duration-500 hover:scale-105  p-6">
           <div className="mb-5">
             <h1 className="text-2xl text-center font-bold  mb-2">Tools</h1>
             <div className="w-full h-1 bg-primary mx-auto rounded-full"></div>
