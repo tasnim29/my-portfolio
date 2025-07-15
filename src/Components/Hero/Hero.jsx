@@ -1,47 +1,48 @@
+// src/Components/Hero/Hero.jsx
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import profileImage from "../../assets/profileImg.jpg";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
-const Hero = () => {
+const Hero = ({ color }) => {
   return (
     <div
       id="home"
-      className="flex flex-col items-center justify-center text-center px-6 pb-12 pt-32 bg-transparent"
+      className="flex flex-col items-center justify-center text-center px-6 pb-16 pt-32"
     >
       {/* Profile Image */}
       <img
         src={profileImage}
-        alt="Alex Bennett"
-        className="w-40 h-40 object-cover rounded-full border-4 border-primary shadow-lg"
+        alt="Tasnim Mahmud"
+        className="w-40 h-40 object-cover rounded-full border-4 border-cyan-500 shadow-lg"
       />
 
-      {/* Name and Title */}
-      <h1 className="text-5xl font-bold mt-6">
+      {/* Name & Typewriter */}
+      <h1 className="text-4xl md:text-6xl font-bold mt-6 leading-tight">
         <span className="bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-500 bg-clip-text text-transparent">
           <Typewriter
-            words={[" I’m Tasnim Mahmud,"]}
+            words={["I’m Tasnim Mahmud,"]}
             loop={false}
             cursor
             cursorStyle="|"
-            typeSpeed={100}
-            deleteSpeed={100}
-            delaySpeed
-          ></Typewriter>
+            typeSpeed={90}
+            deleteSpeed={60}
+            delaySpeed={1200}
+          />
         </span>
         <br />
         <span className="text-white">Web developer based in Bangladesh.</span>
       </h1>
 
-      <p className="text-secondary text-lg max-w-2xl mt-4">
-        “I’m passionate about building clean and responsive web applications.
-        Currently learning and growing my skills in React, JavaScript, and
-        modern web technologies. Excited to take on new challenges and
-        contribute to meaningful projects.”
+      <p className="text-gray-300 text-base md:text-lg max-w-2xl mt-4 leading-relaxed">
+        I’m passionate about building clean, interactive, and responsive web
+        applications. Currently growing my skills in React, JavaScript, and
+        modern tech stacks. Ready for meaningful challenges.
       </p>
 
-      {/* Social Icons */}
-      <div className="flex gap-6 text-3xl text-primary mt-6">
+      {/* Social Links */}
+      <div className="flex gap-6 text-3xl text-cyan-400 mt-6">
         <a
           href="https://github.com/tasnim29"
           target="_blank"
@@ -66,14 +67,37 @@ const Hero = () => {
       </div>
 
       {/* Resume Button */}
-      <a
-        href="https://drive.google.com/file/d/1W-yCh8t-oDw9AJRYtcRGfyg4s-4ksPTq/view?usp=sharing" // Replace with actual link
+      <motion.a
+        href="https://drive.google.com/file/d/1vIvtqo-hZlJ6WoI214JLy58qYJb4gpGH/view"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-8 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-full text-lg font-semibold transition duration-300"
+        initial={false}
+        whileHover={{
+          scale: 1.06,
+          boxShadow: `0 0 25px ${color.get()}`,
+          backgroundColor: color.get(),
+          transition: {
+            duration: 0.3,
+            ease: "easeInOut",
+          },
+        }}
+        whileTap={{ scale: 0.94 }}
+        animate={{
+          boxShadow: [`0 0 8px ${color.get()}`, `0 0 16px ${color.get()}`],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
+        style={{
+          border: `1px solid ${color.get()}`,
+        }}
+        className="mt-8 px-6 py-2 rounded-full text-white font-semibold backdrop-blur-md transition duration-300"
       >
         View Resume
-      </a>
+      </motion.a>
     </div>
   );
 };

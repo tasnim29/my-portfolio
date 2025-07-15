@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import background from "./assets/background.png";
+
 import contactBg from "./assets/contactMe.png";
 import Navbar from "./Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
@@ -13,6 +13,7 @@ import Footer from "./Components/Footer/Footer";
 // aos
 import AOS from "aos";
 import "aos/dist/aos.css";
+import AuroraSection from "./Components/AuroraSection/AuroraSection";
 
 const App = () => {
   useEffect(() => {
@@ -24,16 +25,14 @@ const App = () => {
   }, []);
   return (
     <div className=" text-white outfit">
-      <div
-        className="relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${background})` }}
-      >
-        {/* Content above the background */}
-        <div className="relative z-10">
-          <Navbar />
-          <Hero />
-        </div>
-      </div>
+      <AuroraSection>
+        {({ color }) => (
+          <>
+            <Navbar />
+            <Hero color={color} />
+          </>
+        )}
+      </AuroraSection>
 
       <div className="bg-gradient-to-br from-[#0f172a] via-[#0a2540] to-[#020617]">
         <AboutMe></AboutMe>
