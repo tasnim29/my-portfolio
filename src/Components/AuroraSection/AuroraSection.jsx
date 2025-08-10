@@ -30,7 +30,7 @@ const AuroraSection = ({ children }) => {
   return (
     <motion.div
       style={{ backgroundImage }}
-      className="relative min-h-screen w-full overflow-hidden bg-gray-950 text-white"
+      className="relative min-h-screen w-full  bg-gray-950 text-white"
     >
       {/* Star Field */}
       <div className="absolute inset-0 z-0">

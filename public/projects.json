@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Green Circle",
+    "image": "https://i.ibb.co.com/rRNdfXkp/project1.png",
+    "description": "A vibrant gardening community platform where users can share tips, explore gardener profiles, and join plant care discussions. Built with React, Firebase, MongoDB, and Node.js.",
+    "features": [
+      "Tips Table with filtering by difficulty",
+      "Trending Tips section with live Like updates",
+      "Featured Gardeners showcase"
+    ],
+    "tech": ["React", "Node Js", "Express", "Firebase", "Mongo DB"],
+    "liveLink": "https://green-circle-client.web.app/",
+    "clientRepo": "https://github.com/tasnim29/green-circle",
+    "serverRepo": "https://github.com/tasnim29/green-circle-server",
+    "modalComponent": "DetailsModal1"
+  },
+  {
+    "id": 2,
+    "title": "Echo Journal",
+    "image": "https://i.ibb.co.com/nN69NHf4/project2.png",
+    "description": "Features include responsive design, dynamic blog creation and updates, category filtering and search, wishlist management, detailed blog pages with comments, featured blogs with sortable data tables, newsletter subscription, and smooth animations with Framer Motion.",
+    "features": [
+      "Blog creation, update, and category filtering",
+      "Blog comments (except on own blog)",
+      "Wishlist add/remove per user"
+    ],
+    "tech": ["React", "Node Js", "Express", "Firebase", "Mongo DB"],
+    "liveLink": "https://assignment-11-f3a27.web.app/",
+    "clientRepo": "https://github.com/tasnim29/echo-journal",
+    "serverRepo": "https://github.com/tasnim29/echo-journal-server",
+    "modalComponent": "DetailsModal2"
+  },
+  {
+    "id": 3,
+    "title": "Event Mania",
+    "image": "https://i.ibb.co.com/VWJmTXjs/project3.png",
+    "description": "Discover, explore, and reserve seats for upcoming local events like workshops, conferences, and exhibitions. Includes user authentication, protected routes, dynamic routing, and Firebase integration.",
+    "features": [
+      "Upcoming Events Showcase with details",
+      "Event Details Page with seat reservation form",
+      "User Profile Page "
+    ],
+    "tech": ["React", "Firebase", "React Router", "Mongo DB"],
+    "liveLink": "https://assignment-9-bc372.web.app/",
+    "clientRepo": "https://github.com/tasnim29/event-mania",
+    "serverRepo": null,
+    "modalComponent": "DetailsModal3"
+  }
+]

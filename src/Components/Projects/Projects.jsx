@@ -1,30 +1,51 @@
-import React from "react";
-import underLine from "../../assets/under.png";
-import Project1 from "./Project1/Project1";
-import Project2 from "./Project2/Project2";
-import Project3 from "./Project3/Project3";
+import React, { useEffect, useState } from "react";
+import Works from "./Works";
 
 const Projects = () => {
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    Promise.all([
+      fetch("/projects.json").then((res) => res.json()),
+      fetch("/projectDetails.json").then((res) => res.json()),
+    ])
+      .then(([projectsData, detailsData]) => {
+        const merged = projectsData.map((proj) => {
+          const detail = detailsData.find((d) => d.id === proj.id) || {};
+          return { ...proj, ...detail }; // merge detail properties into project
+        });
+        setProjects(merged);
+      })
+      .catch(console.error);
+  }, []);
+
   return (
-    <div data-aos="fade-up" id="projects" className="py-20 max-w-7xl mx-auto">
-      {/* Title */}
+    <div className="max-w-7xl mx-auto py-20" id="projects" data-aos="fade-up">
       <div className="mb-12 flex justify-center">
         <div className="relative inline-block text-center">
           <h2 className="text-6xl font-bold text-white mb-0 relative">
             My latest works
           </h2>
-          <img
-            src={underLine}
-            alt="Underline"
-            className="absolute right-0 -bottom-2 w-32 z-0"
-          />
+          <svg
+            className="absolute left-0 -bottom-3 w-full h-4 z-0"
+            viewBox="0 0 100 10"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 5 Q 25 0, 50 5 T 100 5"
+              stroke="#06b6d4"
+              strokeWidth="2"
+              fill="transparent"
+            />
+          </svg>
         </div>
       </div>
-      {/* body */}
-      <div>
-        <Project1></Project1>
-        <Project2></Project2>
-        <Project3></Project3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {projects.map((p) => (
+          <Works key={p.id} project={p} />
+        ))}
       </div>
     </div>
   );

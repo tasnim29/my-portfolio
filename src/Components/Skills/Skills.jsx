@@ -1,5 +1,4 @@
 import React from "react";
-import underLine from "../../assets/under.png";
 
 const Skills = () => {
   return (
@@ -8,11 +7,21 @@ const Skills = () => {
       <div className="mb-12 flex justify-center">
         <div className="relative inline-block">
           <h2 className="text-6xl font-bold mb-0 relative">My Specialty</h2>
-          <img
-            src={underLine}
-            alt="Underline"
-            className="absolute right-0 -bottom-2 w-32 z-0"
-          />
+          {/* underline */}
+          <svg
+            className="absolute left-0 -bottom-4 w-full h-4 z-0"
+            viewBox="0 0 100 10"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 5 Q 25 0, 50 5 T 100 5"
+              stroke="#06b6d4" // Cyan-like color
+              strokeWidth="2"
+              fill="transparent"
+            />
+          </svg>
         </div>
       </div>
 

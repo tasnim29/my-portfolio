@@ -19,7 +19,7 @@ const Hero = ({ color }) => {
       />
 
       {/* Name & Typewriter */}
-      <h1 className="text-4xl md:text-6xl font-bold mt-6 leading-tight">
+      <h1 className="text-2xl md:text-5xl font-bold mt-6 leading-tight">
         <span className="bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-500 bg-clip-text text-transparent">
           <Typewriter
             words={["I’m Tasnim Mahmud,"]}

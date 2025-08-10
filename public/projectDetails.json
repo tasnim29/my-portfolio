@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "title": "Green Circle",
+    "titleEmoji": "🌿",
+    "titleColor": "text-green-700",
+    "techStack": [
+      "React, Tailwind CSS, DaisyUI",
+      "Firebase Authentication",
+      "Node.js, Express.js",
+      "MongoDB (CRUD operations)",
+      "React Router, Lottie, and more"
+    ],
+    "description": "Green Circle is a full-stack gardening community web application built for gardening enthusiasts. Users can share garden tips, explore top gardeners, participate in events, and connect over composting, plant care, and more. It features secure login, private routes, CRUD, trending sections, and dynamic user engagement tools.",
+    "links": {
+      "liveSite": {
+        "label": "green-circle-client.web.app",
+        "url": "https://green-circle-client.web.app/"
+      },
+      "clientRepo": {
+        "label": "github.com/tasnim29/green-circle",
+        "url": "https://github.com/tasnim29/green-circle"
+      }
+    },
+    "challenges": [
+      "Ensuring private routes persist after reload",
+      "State management across authentication and routing",
+      "Efficiently handling likes and DB updates",
+      "Integrating Lottie and custom animations seamlessly",
+      "Responsive design for all device sizes"
+    ],
+    "futurePlans": [
+      "Add user messaging/chat between gardeners",
+      "Allow users to join live gardening events",
+      "Profile customization & gardening badges",
+      "Use Redux or Zustand for better state control",
+      "Enable image uploads instead of URL input"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Echo Journal",
+    "titleEmoji": "📝",
+    "titleColor": "text-purple-700",
+    "techStack": [
+      "React, Tailwind CSS",
+      "Firebase Authentication & JWT",
+      "Node.js, Express.js, MongoDB",
+      "Framer Motion, TanStack Table, React Toastify",
+      "React Router DOM, React-Hook-Form"
+    ],
+    "description": "BlogVerse is a fully responsive blog-sharing platform designed for both readers and writers. Users can add, edit, or delete blogs, comment, add blogs to their wishlist, and filter or sort content by category, popularity, or title. It supports JWT-based private routing, blog analytics, and user-specific content control. Built with clean code and seamless animations to impress modern recruiters.",
+    "links": {
+      "liveSite": {
+        "label": "https://assignment-11-f3a27.web.app/",
+        "url": "https://assignment-11-f3a27.web.app/"
+      },
+      "clientRepo": {
+        "label": "https://github.com/tasnim29/echo-journal",
+        "url": "https://github.com/tasnim29/echo-journal"
+      }
+    },
+    "challenges": [
+      "Setting up JWT and maintaining secure protected routes",
+      "Implementing category-based filtering + MongoDB text search",
+      "Ensuring reloads don’t redirect logged-in users to login page",
+      "Dynamic comment system with conditional rendering",
+      "Integrating Framer Motion and TanStack Table efficiently"
+    ],
+    "futurePlans": [
+      "Allow image uploads instead of image URLs",
+      "Enable blog bookmarking & read-later features",
+      "Advanced analytics dashboard for blog writers",
+      "Theme customization (color picker + font selector)",
+      "Add social sharing and comment upvotes"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Event Mania",
+    "titleEmoji": "🎉",
+    "titleColor": "text-indigo-700",
+    "techStack": [
+      "React, React Router DOM",
+      "Firebase Authentication",
+      "Tailwind CSS, DaisyUI",
+      "React Toastify / SweetAlert",
+      "Swiper Slider / AOS Animation"
+    ],
+    "description": "Event Explorer is a responsive single-page application for discovering local events. Users can browse upcoming events, view detailed info, and reserve seats after logging in. The platform includes protected routes, user authentication, a feedback system, dynamic user profile editing, and a vibrant urban-themed UI.",
+    "links": {
+      "liveSite": {
+        "label": "https://assignment-9-bc372.web.app",
+        "url": "https://assignment-9-bc372.web.app"
+      },
+      "clientRepo": {
+        "label": "https://github.com/tasnim29/event-mania",
+        "url": "https://github.com/tasnim29/event-mania"
+      }
+    },
+    "challenges": [
+      "Implementing Firebase `updateProfile` for live profile updates",
+      "Making sure private routes stay intact on page reload",
+      "Handling forgot password flow with auto-filled email redirect",
+      "Form validation with show/hide password toggle",
+      "Animating page sections smoothly using AOS/Swiper"
+    ],
+    "futurePlans": [
+      "Add user dashboard to track reserved events",
+      "Enable real-time seat availability using Firebase Firestore",
+      "Allow users to rate or comment on events post-attendance",
+      "Add categories and tag filtering for better UX",
+      "Store reservation data and enable cancel/edit functionality"
+    ]
+  }
+]

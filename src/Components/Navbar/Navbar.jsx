@@ -12,10 +12,22 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLinkClick = (e, item) => {
+    e.preventDefault();
+    setIsOpen(false);
+    setTimeout(() => {
+      const el = document.getElementById(item);
+      if (el) {
+        const yOffset = -50;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 150);
+  };
 
   const navItems = (
     <>
@@ -25,7 +37,7 @@ const Navbar = () => {
             <AnchorLink
               href={`#${item}`}
               offset="50"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => handleLinkClick(e, item)}
               className="relative group"
             >
               <span className="transition">{item.replace("-", " ")}</span>
@@ -38,50 +50,61 @@ const Navbar = () => {
   );
 
   return (
-    <div
-      className={`w-full fixed top-0 z-[60] transition-all duration-300 ${
-        scrolled ? "backdrop-blur-xl bg-black/60 shadow-xl" : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
-        {/* Logo */}
-        <img className="w-12 rounded-full shadow" src={nameLogo} alt="Logo" />
+    <>
+      {/* Navbar */}
+      <div
+        className={`w-full fixed top-0 z-[60] transition-all duration-300 ${
+          scrolled ? "backdrop-blur-xl bg-black/60 shadow-xl" : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl px-4 mx-auto  py-5 flex justify-between items-center">
+          {/* Logo */}
+          <img className="w-12 rounded-full shadow" src={nameLogo} alt="Logo" />
 
-        {/* Desktop nav */}
-        <ul className="hidden md:flex gap-8 text-lg items-center font-medium tracking-wide uppercase">
-          {navItems}
-        </ul>
+          {/* Desktop nav */}
+          <ul className="hidden md:flex gap-8 text-lg items-center font-medium tracking-wide uppercase">
+            {navItems}
+          </ul>
 
-        <div className="hidden md:flex gap-4">
-          <a
-            href="https://github.com/tasnim29"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-          >
-            <FaGithub size={20} />
-          </a>
-          <a
-            href="https://linkedin.com/in/tasnim-mahmud-9102b3294"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-cyan-400 transition"
-          >
-            <FaLinkedin size={20} />
-          </a>
-        </div>
+          {/* Social Icons */}
+          <div className="hidden md:flex gap-4">
+            <a
+              href="https://github.com/tasnim29"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a
+              href="https://linkedin.com/in/tasnim-mahmud-9102b3294"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition"
+            >
+              <FaLinkedin size={20} />
+            </a>
+          </div>
 
-        {/* Mobile Icon */}
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <HiXMark size={28} /> : <HiBars3 size={28} />}
-          </button>
+          {/* Mobile Icon */}
+          <div className="md:hidden">
+            <button
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              onClick={() => setIsOpen(!isOpen)}
+              className="focus:outline-none"
+            >
+              {isOpen ? <HiXMark size={28} /> : <HiBars3 size={28} />}
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer (separate z-index, always solid bg) */}
       {isOpen && (
-        <div className="fixed top-0 left-0 w-3/4 h-full bg-[#111827] text-white z-50 p-6 md:hidden transition-all shadow-2xl backdrop-blur-lg">
+        <div
+          className="fixed top-0 left-0 w-3/4 h-full text-white z-[9999] p-6 md:hidden transition-all shadow-2xl"
+          style={{ backgroundColor: "rgba(17,24,39,0.97)" }}
+        >
           <ul className="space-y-6 text-lg font-medium">{navItems}</ul>
           <a
             href="https://drive.google.com/file/d/1vIvtqo-hZlJ6WoI214JLy58qYJb4gpGH/view"
@@ -94,7 +117,7 @@ const Navbar = () => {
           </a>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
