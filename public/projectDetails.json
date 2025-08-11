@@ -77,40 +77,43 @@
   },
   {
     "id": 3,
-    "title": "Event Mania",
+    "title": "WeFit",
     "titleEmoji": "🎉",
     "titleColor": "text-indigo-700",
     "techStack": [
       "React, React Router DOM",
       "Firebase Authentication",
       "Tailwind CSS, DaisyUI",
-      "React Toastify / SweetAlert",
-      "Swiper Slider / AOS Animation"
+      "Payment Integration with stripe",
+
+      "Node.js, Express.js, MongoDB"
     ],
-    "description": "Event Explorer is a responsive single-page application for discovering local events. Users can browse upcoming events, view detailed info, and reserve seats after logging in. The platform includes protected routes, user authentication, a feedback system, dynamic user profile editing, and a vibrant urban-themed UI.",
+    "description": "WeFit is an all-in-one, next-generation fitness platform designed to bridge the gap between health enthusiasts, personal trainers, and fitness communities. Whether you’re a beginner seeking guidance or a seasoned athlete aiming to push your limits, FitConnect offers a dynamic space to discover expert trainers, explore diverse classes, track progress, and engage with a supportive community.The platform provides a fully responsive and user-friendly experience across mobile, tablet, and desktop devices. With dedicated roles for Members, Trainers, and Admins, WeFit ensures tailored features and smooth navigation for every user type.",
     "links": {
       "liveSite": {
-        "label": "https://assignment-9-bc372.web.app",
-        "url": "https://assignment-9-bc372.web.app"
+        "label": "Live site",
+        "url": "https://we-fit-838bc.web.app/"
       },
       "clientRepo": {
-        "label": "https://github.com/tasnim29/event-mania",
-        "url": "https://github.com/tasnim29/event-mania"
+        "label": "Client Repo",
+        "url": "https://github.com/tasnim29/we-fit-client"
+      },
+      "serverRepo": {
+        "label": "Server Repo",
+        "url": "https://github.com/tasnim29/we-fit-server"
       }
     },
     "challenges": [
       "Implementing Firebase `updateProfile` for live profile updates",
       "Making sure private routes stay intact on page reload",
-      "Handling forgot password flow with auto-filled email redirect",
+      "Implementing separate dashboards and permissions ",
       "Form validation with show/hide password toggle",
-      "Animating page sections smoothly using AOS/Swiper"
+      "Integrating Stripe for membership payments with proper error handling"
     ],
     "futurePlans": [
-      "Add user dashboard to track reserved events",
-      "Enable real-time seat availability using Firebase Firestore",
-      "Allow users to rate or comment on events post-attendance",
-      "Add categories and tag filtering for better UX",
-      "Store reservation data and enable cancel/edit functionality"
+      "Integrate live streaming capabilities for real-time virtual training and classes",
+      "Use machine learning to recommend trainers and classes based on user preferences and goals",
+      "Add features for meal planning, calorie tracking"
     ]
   }
 ]

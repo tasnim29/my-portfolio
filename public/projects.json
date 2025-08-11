@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Green Circle",
     "image": "https://i.ibb.co.com/rRNdfXkp/project1.png",
-    "description": "A vibrant gardening community platform where users can share tips, explore gardener profiles, and join plant care discussions. Built with React, Firebase, MongoDB, and Node.js.",
+    "des": "A vibrant gardening community platform where users can share tips, explore gardener profiles, and join plant care discussions. Built with React, Firebase, MongoDB, and Node.js.",
     "features": [
       "Tips Table with filtering by difficulty",
       "Trending Tips section with live Like updates",
@@ -18,8 +18,8 @@
   {
     "id": 2,
     "title": "Echo Journal",
-    "image": "https://i.ibb.co.com/nN69NHf4/project2.png",
-    "description": "Features include responsive design, dynamic blog creation and updates, category filtering and search, wishlist management, detailed blog pages with comments, featured blogs with sortable data tables, newsletter subscription, and smooth animations with Framer Motion.",
+    "image": "https://i.ibb.co.com/7JtNTK9Z/Screenshot-2025-08-11-133547.png",
+    "des": "Features include responsive design, dynamic blog creation and updates, category filtering and search, wishlist management, detailed blog pages with comments, featured blogs with sortable data tables, newsletter subscription.",
     "features": [
       "Blog creation, update, and category filtering",
       "Blog comments (except on own blog)",
@@ -33,18 +33,25 @@
   },
   {
     "id": 3,
-    "title": "Event Mania",
-    "image": "https://i.ibb.co.com/VWJmTXjs/project3.png",
-    "description": "Discover, explore, and reserve seats for upcoming local events like workshops, conferences, and exhibitions. Includes user authentication, protected routes, dynamic routing, and Firebase integration.",
+    "title": "WeFit",
+    "image": "https://i.ibb.co.com/hRYQgK9k/Screenshot-2025-08-11-134109.png",
+    "des": "WeFit is a next-gen fitness platform built to connect health enthusiasts, personal trainers, and community members all in one place. Whether you're starting your journey or looking to elevate your fitness game, FitConnect helps you discover trainers, explore classes",
     "features": [
-      "Upcoming Events Showcase with details",
-      "Event Details Page with seat reservation form",
-      "User Profile Page "
+      "Browse experienced trainers and view their availability",
+      "Schedule 1-on-1 sessions with trainers ",
+      "Ask questions, share tips, and vote on popular topics "
     ],
-    "tech": ["React", "Firebase", "React Router", "Mongo DB"],
-    "liveLink": "https://assignment-9-bc372.web.app/",
-    "clientRepo": "https://github.com/tasnim29/event-mania",
-    "serverRepo": null,
+    "tech": [
+      "React",
+      "Firebase",
+      "React Router",
+      "Mongo DB",
+      "ExpressJs",
+      "Stripe Integration"
+    ],
+    "liveLink": "https://we-fit-838bc.web.app/",
+    "clientRepo": "https://github.com/tasnim29/we-fit-client",
+    "serverRepo": "https://github.com/tasnim29/we-fit-server",
     "modalComponent": "DetailsModal3"
   }
 ]

@@ -25,15 +25,15 @@ const Works = ({ project }) => {
             <h1 className="text-3xl font-bold text-primary mb-4">
               {project.title}
             </h1>
-            <p className="text-gray-300 mb-5 leading-relaxed text-sm md:text-base line-clamp-3">
-              {project.description}
+            <p className="text-gray-300 mb-5 leading-relaxed text-sm md:text-base ">
+              {project.des}
             </p>
 
             {/* Features - Limited to 3 items */}
             <h2 className="text-lg font-semibold text-white mb-3">
               Key Features
             </h2>
-            <ul className="space-y-2 text-gray-400 text-sm list-disc list-inside mb-6 line-clamp-3">
+            <ul className="space-y-2 text-gray-400 text-sm list-disc list-inside mb-6 ">
               {project.features?.map((feature, idx) => (
                 <li key={idx}>{feature}</li>
               ))}
